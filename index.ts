@@ -151,7 +151,7 @@ const APIInstance = (apiRoot: string, mirloApiKey: string) => {
       });
     },
 
-    streamUrl: (track: { audio: { url: string } }): string | undefined => {
+    streamUrl: (track: { audio?: { url: string } }): string | undefined => {
       if (track.audio) {
         return `${apiRoot}${track.audio.url}`;
       } else {
