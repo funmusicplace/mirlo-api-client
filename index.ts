@@ -70,6 +70,7 @@ const APIInstance = (apiRoot: string, mirloApiKey: string) => {
     root: api,
     paymentProcessor: {
       stripeConnect: (userId: number) => api + `users/${userId}/stripe/connect`,
+      paypalConnect: (userId: number) => api + `users/${userId}/paypal/connect`,
     },
     request: apiRequest,
     post: async <T, R>(
