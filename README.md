@@ -15,3 +15,8 @@ const api = APIInstance("http://localhost:3000", "");
 
 export default api;
 ```
+
+## To update.
+
+1. Bump the version number in package.json
+  
