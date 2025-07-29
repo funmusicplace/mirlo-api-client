@@ -19,4 +19,4 @@ export default api;
 ## To update.
 
 1. Bump the version number in package.json
-  
+2. `npm publish`
