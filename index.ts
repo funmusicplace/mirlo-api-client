@@ -9,6 +9,7 @@ const APIInstance = (apiRoot: string, mirloApiKey: string) => {
     "login",
     "logout",
     "refresh",
+    "verify-password",
     "signup",
     "password-reset/initiate",
     "password-reset/set-password",
