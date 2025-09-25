@@ -111,11 +111,17 @@ const APIInstance = (apiRoot: string, mirloApiKey: string) => {
 
     uploadFile: async (
       endpoint: string,
-      files: File[]
+      files: File[],
+      bodyParams?: { [key: string]: string }
     ): Promise<{ result: { jobId: string } }> => {
       var fd = new FormData();
       for (let i = 0; i < files.length; i++) {
         fd.append("upload", files[i]);
+      }
+      if (bodyParams) {
+        Object.keys(bodyParams).forEach((key) => {
+          fd.append(key, bodyParams[key]);
+        });
       }
       return apiRequest(endpoint, {
         method: "PUT",
